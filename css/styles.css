@@ -1,0 +1,85 @@
+/* Existing CSS styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Added for inline flex display of list items */
+    align-items: center; /* Centers the links vertically */
+    justify-content: space-between; /* Align items with space between */
+
+}
+
+nav ul li {
+    display: flex;
+}
+
+nav ul li.social-links {
+    order: 2; /* Position the social links at the end */
+}
+
+nav ul li:not(.social-links) {
+    order: 1;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block; /* Make the anchor tags block elements */
+    padding: 1em; /* Add some padding for spacing */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+nav ul li.social-links a {
+    margin-left: 10px; /* Spacing between social links */
+    background-color: transparent; /* Optional: Style as needed */
+}
+
+/* New hover effect */
+nav ul li a:hover, nav ul li a.active {
+    background-color: #555; /* Change this color to your preferred highlight color */
+    color: white;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li.social-links {
+        align-self: center; /* Center social links on smaller screens */
+        order: 3; /* Place them at the bottom */
+    }
+}
