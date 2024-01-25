@@ -8,3 +8,14 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var navToggle = document.getElementById('nav-toggle');
+    var navLinks = document.getElementById('nav-links');
+
+    navToggle.addEventListener('click', function() {
+        this.classList.toggle('open');
+        navLinks.classList.toggle('open');
+    });
+});
