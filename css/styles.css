@@ -112,7 +112,7 @@ main {
     }
 
     header nav ul li.social-links {
-        visibility: hidden;
+        display: none;
     }
 
     #nav-toggle {
